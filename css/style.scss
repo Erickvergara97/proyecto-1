@@ -1,0 +1,221 @@
+/*Primary-colors*/
+
+$intro-email-sign-up-background: hsl(217,28%,15%);
+$main-background: hsl(218,28%,13%);
+$footer-background: hsl(216,53%,9%);
+$testimonials-background: hsl(219,30%,18%);
+
+/*Accents*/
+$call-to-action1: hsl(176, 68%, 64%);
+$call-to-action2: hsl(198, 60%, 50%);
+$error: hsl(0, 100%, 63%);
+$hover: hsla(198, 60%, 50%, 0.192);
+
+/*Neutral*/
+$neutral: hsl(0, 0%, 100%);
+
+*{
+    margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+};
+
+body{
+    background-color: $main-background;
+    text-align: center;
+    h1, h2, h3{
+        font-weight: 700;
+        margin: 20px;
+    };
+    h2{
+        line-height: 40px;
+    };
+
+    p, ul{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 400;
+        margin: 20px;
+    };
+
+};
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    'barra barra barra barra barra'
+    'main main main main main'
+    'ventajas ventajas ventajas ventajas ventajas'
+    'info-adicional info-adicional info-adicional info-adicional info-adicional'
+    'testimonios testimonios testimonios testimonios testimonios'
+    'formulario formulario formulario formulario formulario'
+    'contacto contacto contacto contacto contacto'
+    'unordered-list unordered-list unordered-list unordered-list unordered-list'
+    'footer footer footer footer footer';
+    
+    background-color: $main-background;
+    padding: 0px;
+    height: auto;
+    width: auto;
+};
+
+div{ 
+    padding: 20px 0;
+    font-size: 14px;
+    color: $neutral;
+
+    img{
+        margin: 20px;
+    };
+
+    .boton{
+        height: 50px;
+        width: 200px;
+        color: $neutral;
+        background-color: $call-to-action2;
+        border-radius: 40px;
+        margin-top: 10px;
+        margin-bottom: 50px;
+        padding: 0 0px;
+    };
+
+    .boton:hover{
+        background-color: $hover
+    };
+    
+    .barra{
+        grid-area: barra;
+        top: 0;
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        align-items: center;
+
+        ul{
+            display: flex;
+            li{
+                margin: 5px
+            };
+
+            li:hover{
+                color: $hover;
+            };
+        };
+    };
+    .main{
+        grid-area: main;
+        background-color: $main-background;
+        margin: 0 25px;
+
+       
+    };
+    .ventajas{
+        grid-area: ventajas;
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        padding: 0 20px;
+
+        img{
+            align-self: center;
+        };
+       p{
+           margin-bottom: 60px;
+       };
+    };
+    .info-adicional{
+        grid-area: info-adicional;
+
+        h3, p{
+            text-align: left;
+            padding-left: 20px;
+        };
+
+        a{
+            color: $call-to-action1;
+            text-decoration: underline;
+        };
+    };
+    .contenedor-testimonios{
+        display: flex;
+        flex-flow: column;
+        img{
+            height: 20px;
+            width: 25px;
+        }
+        .testimonios{
+            grid-area: testimonios;
+            background-color: $testimonials-background;
+            margin: 0 20px;
+            padding: 10px;
+            border-radius: 25px;
+            img{
+                border-radius: 50%;
+                height: 40px;
+                width: auto;
+            }
+        };
+    };
+    .formulario{
+        grid-area: formulario;
+        background-color: $intro-email-sign-up-background;
+        margin: 20px;
+        border-radius: 25px;
+        input{
+            width: 80%;
+        }
+
+        .input-mail{
+            padding: 20px 20px 10px 20px;
+            border-radius: 25px; 
+        };
+    };
+    .contacto{
+        grid-area: contacto;
+        background-color: $footer-background;
+        display: flex;
+        align-items: flex-start;
+        flex-flow: column wrap;
+        ul{
+            text-align: left;
+            li{
+                display: flex;
+                margin-top: 5px;
+               img{
+                   height: 15px;
+                   width: 20px;
+               }; 
+            };
+        };
+    };
+    .unordered-list{
+        grid-area: unordered-list;
+        background-color: $footer-background;
+
+        ul{
+            margin-bottom: 10px;
+            text-align: left;
+            padding-left: 20px;
+            li{
+                padding-top: 10px
+            };
+        };
+    };
+    .footer{
+        grid-area: footer;
+        background-color: $footer-background;
+        display: flex;
+        justify-content: center;
+        
+        
+        .contenedor-circular{
+            border: 1px solid;
+            border-color: $neutral;
+            border-radius: 50%;
+            padding: 10px;
+            margin: 0 10px;
+        };
+    };
+};

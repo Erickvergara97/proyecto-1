@@ -1,0 +1,277 @@
+/*Primary-colors*/
+/*Accents*/
+/*Neutral*/
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+body {
+  background-color: #181f2a;
+  text-align: center;
+}
+
+body h1, body h2, body h3 {
+  font-weight: 700;
+  margin: 20px;
+}
+
+body h2 {
+  line-height: 40px;
+}
+
+body p, body ul {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  margin: 20px;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'barra barra barra barra barra' 'main main main main main' 'ventajas ventajas ventajas ventajas ventajas' 'info-adicional info-adicional info-adicional info-adicional info-adicional' 'testimonios testimonios testimonios testimonios testimonios' 'formulario formulario formulario formulario formulario' 'contacto contacto contacto contacto contacto' 'unordered-list unordered-list unordered-list unordered-list unordered-list' 'footer footer footer footer footer';
+  background-color: #181f2a;
+  padding: 0px;
+  height: auto;
+  width: auto;
+}
+
+div {
+  padding: 20px 0;
+  font-size: 14px;
+  color: white;
+}
+
+div img {
+  margin: 20px;
+}
+
+div .boton {
+  height: 50px;
+  width: 200px;
+  color: white;
+  background-color: #339ecc;
+  border-radius: 40px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  padding: 0 0px;
+}
+
+div .boton:hover {
+  background-color: rgba(51, 158, 204, 0.192);
+}
+
+div .barra {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: barra;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div .barra ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div .barra ul li {
+  margin: 5px;
+}
+
+div .barra ul li:hover {
+  color: rgba(51, 158, 204, 0.192);
+}
+
+div .main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: main;
+  background-color: #181f2a;
+  margin: 0 25px;
+}
+
+div .ventajas {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: ventajas;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 0 20px;
+}
+
+div .ventajas img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+div .ventajas p {
+  margin-bottom: 60px;
+}
+
+div .info-adicional {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: info-adicional;
+}
+
+div .info-adicional h3, div .info-adicional p {
+  text-align: left;
+  padding-left: 20px;
+}
+
+div .info-adicional a {
+  color: #65e2d9;
+  text-decoration: underline;
+}
+
+div .contenedor-testimonios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+div .contenedor-testimonios img {
+  height: 20px;
+  width: 25px;
+}
+
+div .contenedor-testimonios .testimonios {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: testimonios;
+  background-color: #202a3c;
+  margin: 0 20px;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+div .contenedor-testimonios .testimonios img {
+  border-radius: 50%;
+  height: 40px;
+  width: auto;
+}
+
+div .formulario {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: formulario;
+  background-color: #1c2431;
+  margin: 20px;
+  border-radius: 25px;
+}
+
+div .formulario input {
+  width: 80%;
+}
+
+div .formulario .input-mail {
+  padding: 20px 20px 10px 20px;
+  border-radius: 25px;
+}
+
+div .contacto {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: contacto;
+  background-color: #0b1523;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+div .contacto ul {
+  text-align: left;
+}
+
+div .contacto ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5px;
+}
+
+div .contacto ul li img {
+  height: 15px;
+  width: 20px;
+}
+
+div .unordered-list {
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: unordered-list;
+  background-color: #0b1523;
+}
+
+div .unordered-list ul {
+  margin-bottom: 10px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+div .unordered-list ul li {
+  padding-top: 10px;
+}
+
+div .footer {
+  -ms-grid-row: 9;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: footer;
+  background-color: #0b1523;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div .footer .contenedor-circular {
+  border: 1px solid;
+  border-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0 10px;
+}
+/*# sourceMappingURL=style.css.map */
