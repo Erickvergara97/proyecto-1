@@ -27,6 +27,7 @@ body{
     background-color: $main-background;
     text-align: center;
     h1, h2, h3{
+        font-family: "raleway","Arial";
         font-weight: 700;
         margin: 20px;
     };
@@ -45,15 +46,15 @@ body{
 .grid-container{
     display: grid;
     grid-template-areas: 
-    'barra barra barra barra barra'
-    'main main main main main'
-    'ventajas ventajas ventajas ventajas ventajas'
-    'info-adicional info-adicional info-adicional info-adicional info-adicional'
-    'testimonios testimonios testimonios testimonios testimonios'
-    'formulario formulario formulario formulario formulario'
-    'contacto contacto contacto contacto contacto'
-    'unordered-list unordered-list unordered-list unordered-list unordered-list'
-    'footer footer footer footer footer';
+    'barra barra barra'
+    'main main main'
+    'ventajas ventajas ventajas'
+    'info-adicional info-adicional info-adicional'
+    'testimonios testimonios testimonios'
+    'formulario formulario formulario'
+    'contacto contacto contacto'
+    'unordered-list unordered-list unordered-list'
+    'footer footer footer';
     
     background-color: $main-background;
     padding: 0px;
@@ -66,9 +67,7 @@ div{
     font-size: 14px;
     color: $neutral;
 
-    img{
-        margin: 20px;
-    };
+    
 
     .boton{
         height: 50px;
@@ -127,36 +126,78 @@ div{
     };
     .info-adicional{
         grid-area: info-adicional;
+        display: flex;
+        flex-flow: column;
+        margin: 20px;
+        padding: 10px;
 
         h3, p{
             text-align: left;
             padding-left: 20px;
+            width: auto;
+            margin: 0 0 20px 0;
         };
+
 
         a{
             color: $call-to-action1;
             text-decoration: underline;
+            align-self:flex-start;
+            padding-left: 20px;
+            img{
+                padding-bottom: 0px;
+                border-bottom: 1.5px solid $call-to-action1;
+            }
         };
     };
     .contenedor-testimonios{
         display: flex;
         flex-flow: column;
+        grid-column: 1/4;
+        text-align: left;
+        h3{
+            margin: 0 50px;
+        }
+        p{
+            line-height: 25px;
+        }
         img{
             height: 20px;
             width: 25px;
-        }
+            margin-left: 35px;
+        };
         .testimonios{
             grid-area: testimonios;
             background-color: $testimonials-background;
-            margin: 0 20px;
+            margin: 0 20px 20px 20px;
             padding: 10px;
             border-radius: 25px;
+            display: flex;
+            flex-flow: column;
+            ul{
+                display: flex;
+            }
             img{
                 border-radius: 50%;
                 height: 40px;
                 width: auto;
+                align-self:baseline;
+                margin: 20px 10px 0 0;
             }
+
+            .contenedor-perfil{
+                align-self: center;
+                text-align: left;
+
+                h3{
+                    margin: 0;
+                }
+               
+                p{
+                    margin: 0 ;
+                }
         };
+            };
     };
     .formulario{
         grid-area: formulario;
@@ -178,6 +219,9 @@ div{
         display: flex;
         align-items: flex-start;
         flex-flow: column wrap;
+        img{
+            margin: 20px;
+        }
         ul{
             text-align: left;
             li{
@@ -211,10 +255,9 @@ div{
         
         
         .contenedor-circular{
-            border: 1px solid;
-            border-color: $neutral;
+            border: 1px solid $neutral;
             border-radius: 50%;
-            padding: 10px;
+            padding: 5px;
             margin: 0 10px;
         };
     };
