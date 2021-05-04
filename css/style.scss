@@ -9,7 +9,6 @@ $testimonials-background: hsl(219,30%,18%);
 $call-to-action1: hsl(176, 68%, 64%);
 $call-to-action2: hsl(198, 60%, 50%);
 $error: hsl(0, 100%, 63%);
-$hover: hsla(198, 60%, 50%, 0.192);
 
 /*Neutral*/
 $neutral: hsl(0, 0%, 100%);
@@ -81,7 +80,7 @@ div{
     };
 
     .boton:hover{
-        background-color: $hover
+        background-color: $call-to-action1;
     };
     
     .barra{
@@ -92,6 +91,11 @@ div{
         justify-content: space-between;
         align-items: center;
 
+        img{
+            height: 30px;
+            width: 100px;
+        }
+
         ul{
             display: flex;
             li{
@@ -99,7 +103,10 @@ div{
             };
 
             li:hover{
-                color: $hover;
+                color: $neutral;
+                font-weight: 700;
+                text-decoration: underline 1px solid;
+                cursor: pointer;
             };
         };
     };
@@ -107,6 +114,10 @@ div{
         grid-area: main;
         background-color: $main-background;
         margin: 0 25px;
+
+        img{
+            height: 200px;
+        }
 
        
     };
@@ -119,6 +130,8 @@ div{
 
         img{
             align-self: center;
+            height: 60px;
+            width: 60px;
         };
        p{
            margin-bottom: 60px;
@@ -147,7 +160,11 @@ div{
             img{
                 padding-bottom: 0px;
                 border-bottom: 1.5px solid $call-to-action1;
-            }
+            };
+        };
+        a:hover{
+            color: $neutral;
+            border-color: $neutral;
         };
     };
     .contenedor-testimonios{
@@ -221,7 +238,7 @@ div{
         flex-flow: column wrap;
         img{
             margin: 20px;
-        }
+        };
         ul{
             text-align: left;
             li{
@@ -262,3 +279,194 @@ div{
         };
     };
 };
+
+
+@media screen and (min-width: 375px){
+   
+    div{ 
+        
+        .boton{
+            width: 40%;
+        };
+        
+        .barra{
+            img{
+                margin-left: 30px;
+            }
+    
+            ul{
+                li{
+                    margin: 20px
+                };
+            };
+        };
+        .main{
+            grid-area: main;
+            background-color: $main-background;
+            margin: 0 25px;
+    
+            img{
+                height: 200px;
+            }
+    
+           
+        };
+        .ventajas{
+            grid-area: ventajas;
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            padding: 0 20px;
+    
+            img{
+                align-self: center;
+                height: 60px;
+                width: 60px;
+            };
+           p{
+               margin-bottom: 60px;
+           };
+        };
+        .info-adicional{
+            grid-area: info-adicional;
+            display: flex;
+            flex-flow: column;
+            margin: 20px;
+            padding: 10px;
+    
+            h3, p{
+                text-align: left;
+                padding-left: 20px;
+                width: auto;
+                margin: 0 0 20px 0;
+            };
+    
+    
+            a{
+                color: $call-to-action1;
+                text-decoration: underline;
+                align-self:flex-start;
+                padding-left: 20px;
+                img{
+                    padding-bottom: 0px;
+                    border-bottom: 1.5px solid $call-to-action1;
+                };
+            };
+            a:hover{
+                color: $neutral;
+                border-color: $neutral;
+            };
+        };
+        .contenedor-testimonios{
+            display: flex;
+            flex-flow: column;
+            grid-column: 1/4;
+            text-align: left;
+            h3{
+                margin: 0 50px;
+            }
+            p{
+                line-height: 25px;
+            }
+            img{
+                height: 20px;
+                width: 25px;
+                margin-left: 35px;
+            };
+            .testimonios{
+                grid-area: testimonios;
+                background-color: $testimonials-background;
+                margin: 0 20px 20px 20px;
+                padding: 10px;
+                border-radius: 25px;
+                display: flex;
+                flex-flow: column;
+                ul{
+                    display: flex;
+                }
+                img{
+                    border-radius: 50%;
+                    height: 40px;
+                    width: auto;
+                    align-self:baseline;
+                    margin: 20px 10px 0 0;
+                }
+    
+                .contenedor-perfil{
+                    align-self: center;
+                    text-align: left;
+    
+                    h3{
+                        margin: 0;
+                    }
+                   
+                    p{
+                        margin: 0 ;
+                    }
+            };
+                };
+        };
+        .formulario{
+            grid-area: formulario;
+            background-color: $intro-email-sign-up-background;
+            margin: 20px;
+            border-radius: 25px;
+            input{
+                width: 80%;
+            }
+    
+            .input-mail{
+                padding: 20px 20px 10px 20px;
+                border-radius: 25px; 
+            };
+        };
+        .contacto{
+            grid-area: contacto;
+            background-color: $footer-background;
+            display: flex;
+            align-items: flex-start;
+            flex-flow: column wrap;
+            img{
+                margin: 20px;
+            };
+            ul{
+                text-align: left;
+                li{
+                    display: flex;
+                    margin-top: 5px;
+                   img{
+                       height: 15px;
+                       width: 20px;
+                   }; 
+                };
+            };
+        };
+        .unordered-list{
+            grid-area: unordered-list;
+            background-color: $footer-background;
+    
+            ul{
+                margin-bottom: 10px;
+                text-align: left;
+                padding-left: 20px;
+                li{
+                    padding-top: 10px
+                };
+            };
+        };
+        .footer{
+            grid-area: footer;
+            background-color: $footer-background;
+            display: flex;
+            justify-content: center;
+            
+            
+            .contenedor-circular{
+                border: 1px solid $neutral;
+                border-radius: 50%;
+                padding: 5px;
+                margin: 0 10px;
+            };
+        };
+    };
+ };
