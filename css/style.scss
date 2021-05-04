@@ -385,11 +385,9 @@ div{
             margin: 5% 15%;
             .contenedor-input-form{
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-evenly;
                 
                 .input-mail{
-                    padding: 20px 20px 10px 20px;
-                    border-radius: 25px;
                     height: 10%;
                     margin: 0 2% 0 2%;
                 
