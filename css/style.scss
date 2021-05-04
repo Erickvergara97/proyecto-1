@@ -282,7 +282,23 @@ div{
 
 
 @media screen and (min-width: 375px){
-   
+   .grid-container{
+       position: relative;
+       display: grid;
+       grid-template-areas: 
+       'barra barra barra'
+       'main main main'
+       'ventajas ventajas ventajas'
+       'info-adicional info-adicional info-adicional'
+       'testimonios testimonios testimonios'
+       'formulario formulario formulario'
+       'contacto unordered-list footer';
+       background-color: $main-background;
+       padding: 0px;
+       height: auto;
+       width: auto;
+   };
+
     div{ 
         
         .boton{
@@ -303,18 +319,19 @@ div{
         .main{
             grid-area: main;
             background-color: $main-background;
-            margin: 0 25px;
+            margin: 0 20%;
     
             img{
-                height: 200px;
+                height: 300px;
             }
     
            
         };
         .ventajas{
             grid-area: ventajas;
-            display: flex;
-            flex-flow: column wrap;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 50% 50%;
             align-content: center;
             padding: 0 20px;
     
@@ -322,103 +339,69 @@ div{
                 align-self: center;
                 height: 60px;
                 width: 60px;
+                order: 1;
             };
+            h3{
+                order: 2;
+            }
            p{
                margin-bottom: 60px;
+               order: 2;
            };
         };
         .info-adicional{
-            grid-area: info-adicional;
-            display: flex;
-            flex-flow: column;
-            margin: 20px;
-            padding: 10px;
+            flex-flow: row;
+
+           .imagen-info-adicional{
+               width: 60%;
+           }
     
             h3, p{
-                text-align: left;
-                padding-left: 20px;
-                width: auto;
-                margin: 0 0 20px 0;
+                
+                padding-left: 30px;
             };
-    
-    
-            a{
-                color: $call-to-action1;
-                text-decoration: underline;
-                align-self:flex-start;
-                padding-left: 20px;
-                img{
-                    padding-bottom: 0px;
-                    border-bottom: 1.5px solid $call-to-action1;
+
+            .contenedor-info{   
+                    a{
+                    padding-left: 0;
+                    img{
+                        padding-bottom: 0px;
+                        border-bottom: 1.5px solid $call-to-action1;
+                    };
                 };
-            };
-            a:hover{
-                color: $neutral;
-                border-color: $neutral;
+                a:hover{
+                    color: $neutral;
+                    border-color: $neutral;
+                };
             };
         };
         .contenedor-testimonios{
-            display: flex;
-            flex-flow: column;
+            justify-content: space-evenly;
+            flex-flow: row ;
             grid-column: 1/4;
-            text-align: left;
-            h3{
-                margin: 0 50px;
-            }
-            p{
-                line-height: 25px;
-            }
-            img{
-                height: 20px;
-                width: 25px;
-                margin-left: 35px;
-            };
-            .testimonios{
-                grid-area: testimonios;
-                background-color: $testimonials-background;
-                margin: 0 20px 20px 20px;
-                padding: 10px;
-                border-radius: 25px;
-                display: flex;
-                flex-flow: column;
-                ul{
-                    display: flex;
-                }
-                img{
-                    border-radius: 50%;
-                    height: 40px;
-                    width: auto;
-                    align-self:baseline;
-                    margin: 20px 10px 0 0;
-                }
-    
-                .contenedor-perfil{
-                    align-self: center;
-                    text-align: left;
-    
-                    h3{
-                        margin: 0;
-                    }
-                   
-                    p{
-                        margin: 0 ;
-                    }
-            };
-                };
         };
+        
         .formulario{
-            grid-area: formulario;
-            background-color: $intro-email-sign-up-background;
-            margin: 20px;
-            border-radius: 25px;
-            input{
-                width: 80%;
+            margin: 5% 15%;
+            .contenedor-input-form{
+                display: flex;
+                justify-content: space-between;
+                
+                .input-mail{
+                    padding: 20px 20px 10px 20px;
+                    border-radius: 25px;
+                    height: 10%;
+                    margin: 0 2% 0 2%;
+                
+                };
+                input{
+                    width: 300px;
+                    height: 46px;
+                    margin: 0 2% 0 0;
+                   margin-right: 50px;
+                };
+        
             }
-    
-            .input-mail{
-                padding: 20px 20px 10px 20px;
-                border-radius: 25px; 
-            };
         };
         .contacto{
             grid-area: contacto;
@@ -430,11 +413,12 @@ div{
                 margin: 20px;
             };
             ul{
+                display: flex;
+                flex-flow: row wrap;
                 text-align: left;
                 li{
-                    display: flex;
                     margin-top: 5px;
-                   img{
+                    img{
                        height: 15px;
                        width: 20px;
                    }; 
@@ -442,31 +426,24 @@ div{
             };
         };
         .unordered-list{
-            grid-area: unordered-list;
-            background-color: $footer-background;
-    
-            ul{
-                margin-bottom: 10px;
-                text-align: left;
-                padding-left: 20px;
-                li{
-                    padding-top: 10px
-                };
-            };
+           
+            display: flex;
+            padding-top: 125px;
         };
         .footer{
-            grid-area: footer;
-            background-color: $footer-background;
-            display: flex;
-            justify-content: center;
+            padding-top: 155px;
             
             
             .contenedor-circular{
-                border: 1px solid $neutral;
-                border-radius: 50%;
-                padding: 5px;
+                padding: 10px;
                 margin: 0 10px;
+                height: 2%;
+
+                i{
+                    padding-bottom: 10px;
+
+                }
             };
         };
     };
- };
+};
