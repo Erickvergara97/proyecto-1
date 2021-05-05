@@ -358,7 +358,7 @@ div .footer .contenedor-circular {
   margin: 0 10px;
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 700px) {
   .grid-container {
     position: relative;
     display: -ms-grid;
