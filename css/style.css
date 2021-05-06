@@ -34,7 +34,11 @@ body p, body ul {
 .grid-container {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'barra barra barra' 'main main main' 'ventajas ventajas ventajas' 'info-adicional info-adicional info-adicional' 'testimonios testimonios testimonios' 'formulario formulario formulario' 'contacto contacto contacto' 'unordered-list unordered-list unordered-list' 'footer footer footer';
+      grid-template-areas: 'barra' 'main' 'ventajas' 'info-adicional' 'testimonios' 'formulario' 'contacto' 'unordered-list' 'footer';
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
   background-color: #181f2a;
   padding: 0px;
   height: auto;
@@ -65,7 +69,6 @@ div .boton:hover {
 div .barra {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: barra;
   top: 0;
   display: -webkit-box;
@@ -106,7 +109,6 @@ div .barra ul li:hover {
 div .main {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: main;
   background-color: #181f2a;
   margin: 0 25px;
@@ -119,7 +121,6 @@ div .main img {
 div .ventajas {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: ventajas;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -137,7 +138,7 @@ div .ventajas img {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  height: 60px;
+  height: auto;
   width: 60px;
 }
 
@@ -148,7 +149,6 @@ div .ventajas p {
 div .info-adicional {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: info-adicional;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -217,7 +217,6 @@ div .contenedor-testimonios img {
 div .contenedor-testimonios .testimonios {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: testimonios;
   background-color: #202a3c;
   margin: 0 20px 20px 20px;
@@ -265,7 +264,6 @@ div .contenedor-testimonios .testimonios .contenedor-perfil p {
 div .formulario {
   -ms-grid-row: 6;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: formulario;
   background-color: #1c2431;
   margin: 20px;
@@ -284,7 +282,6 @@ div .formulario .input-mail {
 div .contacto {
   -ms-grid-row: 7;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: contacto;
   background-color: #0b1523;
   display: -webkit-box;
@@ -322,7 +319,6 @@ div .contacto ul li img {
 div .unordered-list {
   -ms-grid-row: 8;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: unordered-list;
   background-color: #0b1523;
 }
@@ -340,7 +336,6 @@ div .unordered-list ul li {
 div .footer {
   -ms-grid-row: 9;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: footer;
   background-color: #0b1523;
   display: -webkit-box;

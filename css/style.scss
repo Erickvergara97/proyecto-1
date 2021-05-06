@@ -42,19 +42,21 @@ body{
 
 };
 
+
 .grid-container{
     display: grid;
     grid-template-areas: 
-    'barra barra barra'
-    'main main main'
-    'ventajas ventajas ventajas'
-    'info-adicional info-adicional info-adicional'
-    'testimonios testimonios testimonios'
-    'formulario formulario formulario'
-    'contacto contacto contacto'
-    'unordered-list unordered-list unordered-list'
-    'footer footer footer';
-    
+    'barra'
+    'main'
+    'ventajas'
+    'info-adicional'
+    'testimonios'
+    'formulario'
+    'contacto'
+    'unordered-list'
+    'footer';
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: auto;
     background-color: $main-background;
     padding: 0px;
     height: auto;
@@ -130,7 +132,7 @@ div{
 
         img{
             align-self: center;
-            height: 60px;
+            height: auto;
             width: 60px;
         };
        p{
