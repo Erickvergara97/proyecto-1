@@ -13,6 +13,8 @@
 body {
   background-color: #181f2a;
   text-align: center;
+  font-size: 14px;
+  color: white;
 }
 
 body h1, body h2, body h3 {
@@ -28,7 +30,7 @@ body h2 {
 body p, body ul {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400;
-  margin: 20px;
+  margin: 30px;
 }
 
 .grid-container {
@@ -40,18 +42,9 @@ body p, body ul {
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   background-color: #181f2a;
-  padding: 0px;
-  height: auto;
-  width: auto;
 }
 
-div {
-  padding: 20px 0;
-  font-size: 14px;
-  color: white;
-}
-
-div .boton {
+.boton {
   height: 50px;
   width: 200px;
   color: white;
@@ -62,11 +55,11 @@ div .boton {
   padding: 0 0px;
 }
 
-div .boton:hover {
+.boton:hover {
   background-color: #65e2d9;
 }
 
-div .barra {
+.barra {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: barra;
@@ -74,31 +67,33 @@ div .barra {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 10px;
+  padding: 3%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #1c2431;
 }
 
-div .barra img {
-  height: 30px;
-  width: 100px;
+.barra img {
+  padding-left: 5%;
+  height: auto;
+  width: 15%;
 }
 
-div .barra ul {
+.barra ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-div .barra ul li {
-  margin: 5px;
+.barra ul li {
+  margin: 0 15px 0 25px;
 }
 
-div .barra ul a:hover {
+.barra ul a:hover {
   color: white;
   font-weight: 700;
   -webkit-text-decoration: underline 1px solid;
@@ -106,33 +101,50 @@ div .barra ul a:hover {
   cursor: pointer;
 }
 
-div .barra ul a:link {
+.barra ul a:link {
   color: white;
 }
 
-div .barra ul a:visited {
+.barra ul a:visited {
   color: white;
 }
 
-div .barra ul a:active {
+.barra ul a:active {
   color: #65e2d9;
   -webkit-text-decoration: underline 1px solid #65e2d9;
           text-decoration: underline 1px solid #65e2d9;
 }
 
-div .main {
+.main {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: main;
-  background-color: #181f2a;
-  margin: 0 25px;
+  background-color: #1c2431;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5% 15% 0 15%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-image: url(/proyecto-1/imagenes-svg/bg-curvy-mobile.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-div .main img {
-  height: 200px;
+.main img {
+  height: auto;
+  width: 80%;
 }
 
-div .ventajas {
+.ventajas {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: ventajas;
@@ -145,22 +157,22 @@ div .ventajas {
           flex-flow: column wrap;
   -ms-flex-line-pack: center;
       align-content: center;
-  padding: 0 20px;
+  padding: 10% 15%;
 }
 
-div .ventajas img {
+.ventajas img {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   height: auto;
-  width: 60px;
+  width: 15%;
 }
 
-div .ventajas p {
-  margin-bottom: 60px;
+.ventajas p {
+  padding-bottom: 10%;
 }
 
-div .info-adicional {
+.info-adicional {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: info-adicional;
@@ -171,18 +183,22 @@ div .info-adicional {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  margin: 20px;
-  padding: 10px;
+  padding: 15%;
+  margin-bottom: 20%;
 }
 
-div .info-adicional h3, div .info-adicional p {
+.info-adicional h3, .info-adicional p {
   text-align: left;
   padding-left: 20px;
   width: auto;
   margin: 0 0 20px 0;
 }
 
-div .info-adicional a {
+.info-adicional .imagen-info-adicional {
+  padding-bottom: 15%;
+}
+
+.info-adicional a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -196,33 +212,33 @@ div .info-adicional a {
   padding-left: 20px;
 }
 
-div .info-adicional a img {
+.info-adicional a img {
   padding-left: 10px;
 }
 
-div .info-adicional a:hover {
+.info-adicional a:hover {
   color: white;
   border-color: white;
 }
 
-div .info-adicional a:link {
+.info-adicional a:link {
   color: white;
 }
 
-div .info-adicional a:visited {
+.info-adicional a:visited {
   color: #65e2d9;
 }
 
-div .info-adicional a:active {
+.info-adicional a:active {
   color: white;
 }
 
-div .info-adicional a:active img {
+.info-adicional a:active img {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
 }
 
-div .contenedor-testimonios {
+.contenedor-testimonios {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -230,27 +246,26 @@ div .contenedor-testimonios {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-column: 1/4;
   text-align: left;
+  padding: 0 15%;
+  margin-bottom: 30%;
 }
 
-div .contenedor-testimonios h3 {
+.contenedor-testimonios h3 {
   margin: 0 50px;
 }
 
-div .contenedor-testimonios p {
+.contenedor-testimonios p {
   line-height: 25px;
 }
 
-div .contenedor-testimonios img {
+.contenedor-testimonios img {
   height: 20px;
   width: 25px;
   margin-left: 35px;
 }
 
-div .contenedor-testimonios .testimonios {
+.contenedor-testimonios .testimonios {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: testimonios;
@@ -267,57 +282,63 @@ div .contenedor-testimonios .testimonios {
           flex-flow: column;
 }
 
-div .contenedor-testimonios .testimonios ul {
+.contenedor-testimonios .testimonios ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
-div .contenedor-testimonios .testimonios img {
+.contenedor-testimonios .testimonios img {
   border-radius: 50%;
   height: 40px;
   width: auto;
-  -ms-flex-item-align: baseline;
-      align-self: baseline;
   margin: 20px 10px 0 0;
 }
 
-div .contenedor-testimonios .testimonios .contenedor-perfil {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+.contenedor-testimonios .testimonios .contenedor-perfil {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
   text-align: left;
 }
 
-div .contenedor-testimonios .testimonios .contenedor-perfil h3 {
+.contenedor-testimonios .testimonios .contenedor-perfil h3 {
   margin: 0;
 }
 
-div .contenedor-testimonios .testimonios .contenedor-perfil p {
+.contenedor-testimonios .testimonios .contenedor-perfil p {
   margin: 0;
 }
 
-div .formulario {
+.formulario {
   -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: formulario;
   background-color: #1c2431;
-  margin: 20px;
-  border-radius: 25px;
+  margin: 10% 15%;
+  border-radius: 10px;
 }
 
-div .formulario input {
+.formulario input {
   width: 80%;
 }
 
-div .formulario .input-mail {
+.formulario .input-mail {
   padding: 20px 20px 10px 20px;
   border-radius: 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin-bottom: 5%;
 }
 
-div .contacto {
+.contacto {
   -ms-grid-row: 7;
   -ms-grid-column: 1;
   grid-area: contacto;
@@ -334,44 +355,44 @@ div .contacto {
           flex-flow: column wrap;
 }
 
-div .contacto img {
+.contacto img {
   margin: 20px;
 }
 
-div .contacto ul {
+.contacto ul {
   text-align: left;
 }
 
-div .contacto ul li {
+.contacto ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 5px;
 }
 
-div .contacto ul li img {
+.contacto ul li img {
   height: 15px;
   width: 20px;
 }
 
-div .unordered-list {
+.unordered-list {
   -ms-grid-row: 8;
   -ms-grid-column: 1;
   grid-area: unordered-list;
   background-color: #0b1523;
 }
 
-div .unordered-list ul {
+.unordered-list ul {
   margin-bottom: 10px;
   text-align: left;
   padding-left: 20px;
 }
 
-div .unordered-list ul li {
+.unordered-list ul li {
   padding-top: 10px;
 }
 
-div .footer {
+.footer {
   -ms-grid-row: 9;
   -ms-grid-column: 1;
   grid-area: footer;
@@ -386,7 +407,7 @@ div .footer {
       align-content: center;
 }
 
-div .footer .contenedor-circular {
+.footer .contenedor-circular {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -419,27 +440,13 @@ div .footer .contenedor-circular {
     height: auto;
     width: auto;
   }
-  div .boton {
+  .boton {
     width: 40%;
   }
-  div .barra img {
-    margin-left: 30px;
+  .main {
+    background-image: url(/proyecto-1/imagenes-svg/bg-curvy-desktop.svg);
   }
-  div .barra ul li {
-    margin: 20px;
-  }
-  div .main {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-area: main;
-    background-color: #181f2a;
-    margin: 0 20%;
-  }
-  div .main img {
-    height: 300px;
-  }
-  div .ventajas {
+  .ventajas {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
@@ -452,9 +459,9 @@ div .footer .contenedor-circular {
         grid-template-rows: 50% 50%;
     -ms-flex-line-pack: center;
         align-content: center;
-    padding: 0 20px;
+    padding: 5% 10%;
   }
-  div .ventajas img {
+  .ventajas img {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -464,18 +471,18 @@ div .footer .contenedor-circular {
         -ms-flex-order: 1;
             order: 1;
   }
-  div .ventajas h3 {
+  .ventajas h3 {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
-  div .ventajas p {
+  .ventajas p {
     margin-bottom: 60px;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
-  div .info-adicional {
+  .info-adicional {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -484,11 +491,11 @@ div .footer .contenedor-circular {
         -ms-flex-align: center;
             align-items: center;
   }
-  div .info-adicional .imagen-info-adicional {
+  .info-adicional .imagen-info-adicional {
     height: auto;
     width: 65%;
   }
-  div .contenedor-testimonios {
+  .contenedor-testimonios {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
@@ -500,10 +507,10 @@ div .footer .contenedor-circular {
     -ms-grid-column-span: 3;
     grid-column: 1/4;
   }
-  div .formulario {
+  .formulario {
     margin: 5% 15%;
   }
-  div .formulario .contenedor-input-form {
+  .formulario .contenedor-input-form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -511,17 +518,17 @@ div .footer .contenedor-circular {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  div .formulario .contenedor-input-form .input-mail {
+  .formulario .contenedor-input-form .input-mail {
     height: 10%;
     margin: 0 2% 0 2%;
   }
-  div .formulario .contenedor-input-form input {
+  .formulario .contenedor-input-form input {
     width: 300px;
     height: 46px;
     margin: 0 2% 0 0;
     margin-right: 50px;
   }
-  div .contacto {
+  .contacto {
     -ms-grid-row: 7;
     -ms-grid-column: 1;
     grid-area: contacto;
@@ -537,10 +544,10 @@ div .footer .contenedor-circular {
         -ms-flex-flow: column wrap;
             flex-flow: column wrap;
   }
-  div .contacto img {
+  .contacto img {
     margin: 20px;
   }
-  div .contacto ul {
+  .contacto ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -550,14 +557,14 @@ div .footer .contenedor-circular {
             flex-flow: row wrap;
     text-align: left;
   }
-  div .contacto ul li {
+  .contacto ul li {
     margin-top: 5px;
   }
-  div .contacto ul li img {
+  .contacto ul li img {
     height: 15px;
     width: 20px;
   }
-  div .unordered-list {
+  .unordered-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -566,7 +573,7 @@ div .footer .contenedor-circular {
             justify-content: center;
     padding-top: 125px;
   }
-  div .footer {
+  .footer {
     padding-top: 155px;
     padding-right: 10px;
   }
