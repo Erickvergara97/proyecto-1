@@ -104,11 +104,23 @@ div{
                 margin: 5px
             };
 
-            li:hover{
+            a:hover{
                 color: $neutral;
                 font-weight: 700;
                 text-decoration: underline 1px solid;
                 cursor: pointer;
+            };
+            a:link{
+                color: $neutral;
+            };
+
+            a:visited{
+                color: $neutral;
+            };
+
+            a:active{
+                color: $call-to-action1;
+                text-decoration: underline 1px solid $call-to-action1;
             };
         };
     };

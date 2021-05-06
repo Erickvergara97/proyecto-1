@@ -98,12 +98,26 @@ div .barra ul li {
   margin: 5px;
 }
 
-div .barra ul li:hover {
+div .barra ul a:hover {
   color: white;
   font-weight: 700;
   -webkit-text-decoration: underline 1px solid;
           text-decoration: underline 1px solid;
   cursor: pointer;
+}
+
+div .barra ul a:link {
+  color: white;
+}
+
+div .barra ul a:visited {
+  color: white;
+}
+
+div .barra ul a:active {
+  color: #65e2d9;
+  -webkit-text-decoration: underline 1px solid #65e2d9;
+          text-decoration: underline 1px solid #65e2d9;
 }
 
 div .main {
