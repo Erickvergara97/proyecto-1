@@ -167,18 +167,36 @@ div{
 
 
         a{
+            display: flex;
+            align-items: flex-start;
             color: $call-to-action1;
             text-decoration: underline;
             align-self:flex-start;
             padding-left: 20px;
+
             img{
-                padding-bottom: 0px;
-                border-bottom: 1.5px solid $call-to-action1;
-            };
+                padding-left: 10px;
+            }
+            
         };
         a:hover{
             color: $neutral;
             border-color: $neutral;
+        };
+        a:link{
+            color: $neutral;
+        };
+
+        a:visited{
+            color: $call-to-action1;
+        };
+
+        a:active{
+            color: $neutral;
+            img{
+                filter: grayscale(100%);
+            }
+           
         };
     };
     .contenedor-testimonios{
@@ -226,9 +244,9 @@ div{
                
                 p{
                     margin: 0 ;
-                }
-        };
+                };
             };
+        };
     };
     .formulario{
         grid-area: formulario;
@@ -237,7 +255,7 @@ div{
         border-radius: 25px;
         input{
             width: 80%;
-        }
+        };
 
         .input-mail{
             padding: 20px 20px 10px 20px;
@@ -308,13 +326,15 @@ div{
        position: relative;
        display: grid;
        grid-template-areas: 
-       'barra'
-       'main'
-       'ventajas'
-       'info-adicional'
-       'testimonios'
-       'formulario'
-       'contacto';
+       'barra barra barra'
+       'main main main'
+       'ventajas ventajas ventajas'
+       'info-adicional info-adicional info-adicional'
+       'testimonios testimonios testimonios'
+       'formulario formulario formulario'
+       'contacto unordered-list footer';
+       grid-template-columns: repeat(3,1fr);
+       grid-template-rows: auto;
        background-color: $main-background;
        padding: 0px;
        height: auto;
@@ -373,34 +393,22 @@ div{
         };
         .info-adicional{
             flex-flow: row;
+            align-items: center;
+            .imagen-info-adicional{
+                height: auto;
+                width: 65%;
+            }
 
-           .imagen-info-adicional{
-               width: 60%;
-           }
-    
-            h3, p{
-                
-                padding-left: 30px;
-            };
 
-            .contenedor-info{   
-                    a{
-                    padding-left: 0;
-                    img{
-                        padding-bottom: 0px;
-                        border-bottom: 1.5px solid $call-to-action1;
-                    };
-                };
-                a:hover{
-                    color: $neutral;
-                    border-color: $neutral;
-                };
-            };
         };
         .contenedor-testimonios{
             justify-content: space-evenly;
             flex-flow: row ;
             grid-column: 1/4;
+
+            .testimonios{
+               
+            }
         };
         
         .formulario{
@@ -448,22 +456,12 @@ div{
         .unordered-list{
            
             display: flex;
+            justify-content: center;
             padding-top: 125px;
         };
         .footer{
             padding-top: 155px;
-            
-            
-            .contenedor-circular{
-                padding: 10px;
-                margin: 0 10px;
-                height: 2%;
-
-                i{
-                    padding-bottom: 10px;
-
-                }
-            };
+            padding-right: 10px
         };
     };
 };

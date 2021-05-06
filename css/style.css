@@ -183,6 +183,12 @@ div .info-adicional h3, div .info-adicional p {
 }
 
 div .info-adicional a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   color: #65e2d9;
   text-decoration: underline;
   -ms-flex-item-align: start;
@@ -191,13 +197,29 @@ div .info-adicional a {
 }
 
 div .info-adicional a img {
-  padding-bottom: 0px;
-  border-bottom: 1.5px solid #65e2d9;
+  padding-left: 10px;
 }
 
 div .info-adicional a:hover {
   color: white;
   border-color: white;
+}
+
+div .info-adicional a:link {
+  color: white;
+}
+
+div .info-adicional a:visited {
+  color: #65e2d9;
+}
+
+div .info-adicional a:active {
+  color: white;
+}
+
+div .info-adicional a:active img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 div .contenedor-testimonios {
@@ -387,7 +409,11 @@ div .footer .contenedor-circular {
     position: relative;
     display: -ms-grid;
     display: grid;
-        grid-template-areas: 'barra' 'main' 'ventajas' 'info-adicional' 'testimonios' 'formulario' 'contacto';
+        grid-template-areas: 'barra barra barra' 'main main main' 'ventajas ventajas ventajas' 'info-adicional info-adicional info-adicional' 'testimonios testimonios testimonios' 'formulario formulario formulario' 'contacto unordered-list footer';
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
     background-color: #181f2a;
     padding: 0px;
     height: auto;
@@ -405,6 +431,7 @@ div .footer .contenedor-circular {
   div .main {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
     grid-area: main;
     background-color: #181f2a;
     margin: 0 20%;
@@ -415,6 +442,7 @@ div .footer .contenedor-circular {
   div .ventajas {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
     grid-area: ventajas;
     display: -ms-grid;
     display: grid;
@@ -452,23 +480,13 @@ div .footer .contenedor-circular {
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
             flex-flow: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   div .info-adicional .imagen-info-adicional {
-    width: 60%;
-  }
-  div .info-adicional h3, div .info-adicional p {
-    padding-left: 30px;
-  }
-  div .info-adicional .contenedor-info a {
-    padding-left: 0;
-  }
-  div .info-adicional .contenedor-info a img {
-    padding-bottom: 0px;
-    border-bottom: 1.5px solid #65e2d9;
-  }
-  div .info-adicional .contenedor-info a:hover {
-    color: white;
-    border-color: white;
+    height: auto;
+    width: 65%;
   }
   div .contenedor-testimonios {
     -webkit-box-pack: space-evenly;
@@ -543,18 +561,14 @@ div .footer .contenedor-circular {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding-top: 125px;
   }
   div .footer {
     padding-top: 155px;
-  }
-  div .footer .contenedor-circular {
-    padding: 10px;
-    margin: 0 10px;
-    height: 2%;
-  }
-  div .footer .contenedor-circular i {
-    padding-bottom: 10px;
+    padding-right: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
