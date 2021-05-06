@@ -35,8 +35,8 @@ body p, body ul {
   display: -ms-grid;
   display: grid;
       grid-template-areas: 'barra' 'main' 'ventajas' 'info-adicional' 'testimonios' 'formulario' 'contacto' 'unordered-list' 'footer';
-  -ms-grid-columns: (1fr)[1];
-      grid-template-columns: repeat(1, 1fr);
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   background-color: #181f2a;

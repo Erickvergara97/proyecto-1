@@ -55,7 +55,7 @@ body{
     'contacto'
     'unordered-list'
     'footer';
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     background-color: $main-background;
     padding: 0px;
