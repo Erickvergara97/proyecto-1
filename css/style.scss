@@ -271,13 +271,20 @@ div{
         background-color: $footer-background;
         display: flex;
         justify-content: center;
+        align-content: center;
+
         
         
         .contenedor-circular{
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border: 1px solid $neutral;
             border-radius: 50%;
             padding: 5px;
             margin: 0 10px;
+            height: 20px;
+            width: 20px;
         };
     };
 };
@@ -288,13 +295,13 @@ div{
        position: relative;
        display: grid;
        grid-template-areas: 
-       'barra barra barra'
-       'main main main'
-       'ventajas ventajas ventajas'
-       'info-adicional info-adicional info-adicional'
-       'testimonios testimonios testimonios'
-       'formulario formulario formulario'
-       'contacto unordered-list footer';
+       'barra'
+       'main'
+       'ventajas'
+       'info-adicional'
+       'testimonios'
+       'formulario'
+       'contacto';
        background-color: $main-background;
        padding: 0px;
        height: auto;

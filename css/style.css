@@ -344,13 +344,26 @@ div .footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 div .footer .contenedor-circular {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: 1px solid white;
   border-radius: 50%;
   padding: 5px;
   margin: 0 10px;
+  height: 20px;
+  width: 20px;
 }
 
 @media screen and (min-width: 700px) {
@@ -358,7 +371,7 @@ div .footer .contenedor-circular {
     position: relative;
     display: -ms-grid;
     display: grid;
-        grid-template-areas: 'barra barra barra' 'main main main' 'ventajas ventajas ventajas' 'info-adicional info-adicional info-adicional' 'testimonios testimonios testimonios' 'formulario formulario formulario' 'contacto unordered-list footer';
+        grid-template-areas: 'barra' 'main' 'ventajas' 'info-adicional' 'testimonios' 'formulario' 'contacto';
     background-color: #181f2a;
     padding: 0px;
     height: auto;
@@ -376,7 +389,6 @@ div .footer .contenedor-circular {
   div .main {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
     grid-area: main;
     background-color: #181f2a;
     margin: 0 20%;
@@ -387,7 +399,6 @@ div .footer .contenedor-circular {
   div .ventajas {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
     grid-area: ventajas;
     display: -ms-grid;
     display: grid;
