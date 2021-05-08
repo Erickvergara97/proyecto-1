@@ -37,6 +37,7 @@ body p {
 }
 
 .grid-container {
+  position: relative;
   display: -ms-grid;
   display: grid;
       grid-template-areas: 'barra' 'main' 'ventajas' 'info-adicional' 'testimonios' 'formulario' 'contacto' 'unordered-list' 'footer';
@@ -252,7 +253,7 @@ body p {
           flex-flow: column;
   text-align: left;
   padding: 0 10%;
-  margin-bottom: 30%;
+  margin-bottom: 90%;
 }
 
 .contenedor-testimonios p {
@@ -319,6 +320,8 @@ body p {
 }
 
 .formulario {
+  position: absolute;
+  top: -200px;
   -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: formulario;
@@ -340,6 +343,7 @@ body p {
 }
 
 .contacto {
+  padding-top: 70%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -ms-grid-row: 7;

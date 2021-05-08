@@ -48,6 +48,7 @@ body{
 
 
 .grid-container{
+    position: relative;
     display: grid;
     grid-template-areas: 
     'barra'
@@ -217,7 +218,7 @@ body{
     flex-flow: column;
     text-align: left;
     padding: 0 10%;
-    margin-bottom: 30%;
+    margin-bottom: 90%;
    
     p{
         line-height: 25px;
@@ -263,6 +264,8 @@ body{
     };
 };
 .formulario{
+    position: absolute;
+    top: -200px;
     grid-area: formulario;
     background-color: $intro-email-sign-up-background;
     margin: 10%;
@@ -279,6 +282,7 @@ body{
     };
 };
 .contacto{
+    padding-top: 70%;
     box-sizing: border-box;
     grid-area: contacto;
     background-color: $footer-background;
