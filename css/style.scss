@@ -30,7 +30,7 @@ body{
     h1, h2, h3{
         font-family: "raleway","Arial";
         font-weight: 700;
-        margin: 20px;
+        margin: 4%;
     };
     h2{
         line-height: 40px;
@@ -41,7 +41,8 @@ body{
         font-weight: 400;
     };
     p{
-        margin: 10%;
+        margin: 6%;
+        line-height: 20px;
     }
 
 };
@@ -52,6 +53,7 @@ body{
     display: grid;
     grid-template-areas: 
     'barra'
+    'main-image'
     'main'
     'ventajas'
     'info-adicional'
@@ -124,33 +126,39 @@ body{
         };
     };
 };
-.main{
-    grid-area: main;
-    background-color: $intro-email-sign-up-background;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    padding: 5% 10% 0 10%;
-    box-sizing: border-box;
-
-    background-image: url(/proyecto-1/imagenes-svg/bg-curvy-mobile.svg);
+.main-image{
+    grid-area: main-image;
     background-position: bottom;
     background-repeat: no-repeat;
     background-size:contain;
-
+    background-image: url(/proyecto-1/imagenes-svg/bg-curvy-mobile.svg);
+    background-color: $intro-email-sign-up-background;
+    padding-bottom: 25%;
     img{
         height: auto;
         width: 80%;
     }
-
     
+}
+.main{
+    grid-area: main;
+    
+    .contenedor-main{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        padding: 5% 10% 0 10%;
+        box-sizing: border-box;
+        position: absolute;
+        top: 7%;
+    };
 };
 .ventajas{
     grid-area: ventajas;
     display: flex;
     flex-flow: column wrap;
     align-content: center;
-    padding: 10%;
+    padding: 90% 10% 10% 10%;
 
     img{
         align-self: center;
@@ -355,6 +363,7 @@ body{
        display: grid;
        grid-template-areas: 
        'barra barra barra'
+       'main-image main-image main-image' 
        'main main main'
        'ventajas ventajas ventajas'
        'info-adicional info-adicional info-adicional'

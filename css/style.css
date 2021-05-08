@@ -20,7 +20,7 @@ body {
 body h1, body h2, body h3 {
   font-family: "raleway","Arial";
   font-weight: 700;
-  margin: 20px;
+  margin: 4%;
 }
 
 body h2 {
@@ -33,14 +33,15 @@ body p, body ul {
 }
 
 body p {
-  margin: 10%;
+  margin: 6%;
+  line-height: 20px;
 }
 
 .grid-container {
   position: relative;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'barra' 'main' 'ventajas' 'info-adicional' 'testimonios' 'formulario' 'contacto' 'unordered-list' 'footer';
+      grid-template-areas: 'barra' 'main-image' 'main' 'ventajas' 'info-adicional' 'testimonios' 'formulario' 'contacto' 'unordered-list' 'footer';
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
   -ms-grid-rows: auto;
@@ -120,11 +121,30 @@ body p {
           text-decoration: underline 1px solid #65e2d9;
 }
 
-.main {
+.main-image {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  grid-area: main;
+  grid-area: main-image;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/proyecto-1/imagenes-svg/bg-curvy-mobile.svg);
   background-color: #1c2431;
+  padding-bottom: 25%;
+}
+
+.main-image img {
+  height: auto;
+  width: 80%;
+}
+
+.main {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: main;
+}
+
+.main .contenedor-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,19 +158,12 @@ body p {
   padding: 5% 10% 0 10%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-image: url(/proyecto-1/imagenes-svg/bg-curvy-mobile.svg);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.main img {
-  height: auto;
-  width: 80%;
+  position: absolute;
+  top: 7%;
 }
 
 .ventajas {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: ventajas;
   display: -webkit-box;
@@ -162,7 +175,7 @@ body p {
           flex-flow: column wrap;
   -ms-flex-line-pack: center;
       align-content: center;
-  padding: 10%;
+  padding: 90% 10% 10% 10%;
 }
 
 .ventajas img {
@@ -178,7 +191,7 @@ body p {
 }
 
 .info-adicional {
-  -ms-grid-row: 4;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: info-adicional;
   display: -webkit-box;
@@ -267,7 +280,7 @@ body p {
 }
 
 .contenedor-testimonios .testimonios {
-  -ms-grid-row: 5;
+  -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: testimonios;
   background-color: #202a3c;
@@ -322,7 +335,7 @@ body p {
 .formulario {
   position: absolute;
   top: -200px;
-  -ms-grid-row: 6;
+  -ms-grid-row: 7;
   -ms-grid-column: 1;
   grid-area: formulario;
   background-color: #1c2431;
@@ -346,7 +359,7 @@ body p {
   padding-top: 70%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -ms-grid-row: 7;
+  -ms-grid-row: 8;
   -ms-grid-column: 1;
   grid-area: contacto;
   background-color: #0b1523;
@@ -391,7 +404,7 @@ body p {
 }
 
 .unordered-list {
-  -ms-grid-row: 8;
+  -ms-grid-row: 9;
   -ms-grid-column: 1;
   grid-area: unordered-list;
   background-color: #0b1523;
@@ -410,7 +423,7 @@ body p {
 }
 
 .footer {
-  -ms-grid-row: 9;
+  -ms-grid-row: 10;
   -ms-grid-column: 1;
   grid-area: footer;
   background-color: #0b1523;
@@ -448,7 +461,7 @@ body p {
     position: relative;
     display: -ms-grid;
     display: grid;
-        grid-template-areas: 'barra barra barra' 'main main main' 'ventajas ventajas ventajas' 'info-adicional info-adicional info-adicional' 'testimonios testimonios testimonios' 'formulario formulario formulario' 'contacto unordered-list footer';
+        grid-template-areas: 'barra barra barra' 'main-image main-image main-image'  'main main main' 'ventajas ventajas ventajas' 'info-adicional info-adicional info-adicional' 'testimonios testimonios testimonios' 'formulario formulario formulario' 'contacto unordered-list footer';
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
     -ms-grid-rows: auto;
@@ -465,7 +478,7 @@ body p {
     background-image: url(/proyecto-1/imagenes-svg/bg-curvy-desktop.svg);
   }
   .ventajas {
-    -ms-grid-row: 3;
+    -ms-grid-row: 4;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-area: ventajas;
@@ -547,7 +560,7 @@ body p {
     margin-right: 50px;
   }
   .contacto {
-    -ms-grid-row: 7;
+    -ms-grid-row: 8;
     -ms-grid-column: 1;
     grid-area: contacto;
     background-color: #0b1523;
