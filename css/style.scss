@@ -447,9 +447,57 @@ body{
 
     };
     .contenedor-testimonios{
+        position: relative;
         justify-content: space-evenly;
         flex-flow: row ;
         grid-column: 1/4;
+        margin-bottom: 40%;
+
+        .comillas{
+            position: absolute;
+            margin: -4% 0 0 -72%;
+            height: auto;
+            width: 6%;
+            z-index: 0;
+            
+        };
+
+
+        .testimonios{
+            z-index: 1;
+            grid-area: testimonios;
+            background-color: $testimonials-background;
+            margin: 0 20px 20px 20px;
+            padding: 10px;
+            border-radius: 25px;
+            display: flex;
+            flex-flow: column;
+            ul{
+                display: flex;
+                align-items: flex-end;
+                margin: 10%;
+            }
+            img{
+                border-radius: 50%;
+                height: 40px;
+                width: auto;
+                margin: 20px 10px 0 0;
+            }
+
+            .contenedor-perfil{
+                display: flex;
+                flex-flow: column;
+                text-align: left;
+
+                h3{
+                    margin: 0;
+                }
+                
+                p{
+                    margin: 0 ;
+                };
+            };
+        };
     };
     
     .formulario{
