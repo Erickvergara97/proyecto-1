@@ -57,7 +57,7 @@ body{
     'contacto'
     'unordered-list'
     'footer';
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: auto;
     background-color: $main-background;
 };
@@ -276,6 +276,7 @@ body{
     };
 };
 .contacto{
+    box-sizing: border-box;
     grid-area: contacto;
     background-color: $footer-background;
     display: flex;
