@@ -95,8 +95,9 @@ body{
 
     ul{
         display: flex;
+        padding-right: 5%;
         li{
-            margin: 0 15px 0 25px;
+            margin: 0 0 0 5%;
         };
 
         a:hover{
@@ -125,7 +126,7 @@ body{
     display: flex;
     flex-flow: column;
     align-items: center;
-    padding: 5% 15% 0 15%;
+    padding: 5% 10% 0 10%;
     box-sizing: border-box;
 
     background-image: url(/proyecto-1/imagenes-svg/bg-curvy-mobile.svg);
@@ -145,7 +146,7 @@ body{
     display: flex;
     flex-flow: column wrap;
     align-content: center;
-    padding: 10% 15%;
+    padding: 10%;
 
     img{
         align-self: center;
@@ -160,18 +161,18 @@ body{
     grid-area: info-adicional;
     display: flex;
     flex-flow: column;
-    padding: 15%;
+    padding: 10%;
     margin-bottom: 20%;
 
     h3, p{
         text-align: left;
-        padding-left: 20px;
+        padding-left: 5%;
         width: auto;
-        margin: 0 0 20px 0;
+        margin: 0 0 5% 0;
     };
 
     .imagen-info-adicional{
-        padding-bottom: 15%;
+        padding-bottom: 10%;
     }
 
 
@@ -181,10 +182,10 @@ body{
         color: $call-to-action1;
         text-decoration: underline;
         align-self:flex-start;
-        padding-left: 20px;
+        padding-left: 5%;
 
         img{
-            padding-left: 10px;
+            padding-left: 3%;
         }
         
     };
@@ -212,18 +213,16 @@ body{
     display: flex;
     flex-flow: column;
     text-align: left;
-    padding: 0 15%;
+    padding: 0 10%;
     margin-bottom: 30%;
-    h3{
-        margin: 0 50px;
-    }
+   
     p{
         line-height: 25px;
     }
     img{
-        height: 20px;
-        width: 25px;
-        margin-left: 35px;
+        height: auto;
+        width: 8%;
+        margin-left: 10%;
     };
     .testimonios{
         grid-area: testimonios;
