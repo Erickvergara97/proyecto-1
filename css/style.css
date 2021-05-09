@@ -286,7 +286,7 @@ body p {
   background-color: #202a3c;
   margin: 0 20px 20px 20px;
   padding: 10px;
-  border-radius: 25px;
+  border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -529,6 +529,7 @@ body p {
     padding-bottom: 30%;
   }
   .info-adicional {
+    margin-bottom: 0%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
@@ -564,52 +565,8 @@ body p {
   }
   .contenedor-testimonios .testimonios {
     z-index: 1;
-    -ms-grid-row: 6;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-area: testimonios;
-    background-color: #202a3c;
-    margin: 0 20px 20px 20px;
-    padding: 10px;
-    border-radius: 25px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-  }
-  .contenedor-testimonios .testimonios ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    margin: 10%;
-  }
-  .contenedor-testimonios .testimonios img {
-    border-radius: 50%;
-    height: 40px;
-    width: auto;
-    margin: 20px 10px 0 0;
-  }
-  .contenedor-testimonios .testimonios .contenedor-perfil {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    text-align: left;
-  }
-  .contenedor-testimonios .testimonios .contenedor-perfil h3 {
-    margin: 0;
-  }
-  .contenedor-testimonios .testimonios .contenedor-perfil p {
-    margin: 0;
+    margin: 0 0 0 3%;
+    padding: 1%;
   }
   .formulario {
     margin: 0 15%;
