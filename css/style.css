@@ -20,11 +20,10 @@ body {
 body h1, body h2, body h3 {
   font-family: "raleway","Arial";
   font-weight: 700;
-  margin: 4%;
 }
 
 body h2 {
-  line-height: 40px;
+  line-height: 30px;
 }
 
 body p, body ul {
@@ -33,7 +32,6 @@ body p, body ul {
 }
 
 body p {
-  margin: 6%;
   line-height: 20px;
 }
 
@@ -72,7 +70,7 @@ body p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 10% 3%;
+  padding: 40px 20px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -83,16 +81,16 @@ body p {
 }
 
 .barra img {
-  padding-left: 5%;
+  padding-left: 15px;
   height: auto;
-  width: 20%;
+  width: 70px;
 }
 
 .barra ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-right: 5%;
+  padding-right: 15px;
 }
 
 .barra ul li {
@@ -130,12 +128,12 @@ body p {
   background-size: contain;
   background-image: url(/proyecto-1/imagenes-svg/bg-curvy-mobile.svg);
   background-color: #1c2431;
-  padding-bottom: 25%;
+  padding-bottom: 95px;
 }
 
 .main-image img {
   height: auto;
-  width: 80%;
+  width: 285px;
 }
 
 .main {
@@ -155,11 +153,15 @@ body p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 5% 10% 0 10%;
+  margin: 20px 25px 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: absolute;
-  top: 7%;
+  top: 320px;
+}
+
+.main .contenedor-main p {
+  padding: 20px 0;
 }
 
 .ventajas {
@@ -175,7 +177,7 @@ body p {
           flex-flow: column wrap;
   -ms-flex-line-pack: center;
       align-content: center;
-  padding: 90% 10% 10% 10%;
+  margin: 330px 25px 50px;
 }
 
 .ventajas img {
@@ -183,11 +185,13 @@ body p {
       -ms-grid-row-align: center;
       align-self: center;
   height: auto;
-  width: 15%;
+  width: 60px;
+  margin-bottom: 30px;
 }
 
 .ventajas p {
-  padding-bottom: 10%;
+  padding-top: 10px;
+  padding-bottom: 60px;
 }
 
 .info-adicional {
@@ -201,22 +205,30 @@ body p {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  padding: 10%;
-  margin-bottom: 20%;
+  margin: 0px 26px 200px;
+}
+
+.info-adicional .imagen-info-adicional {
+  height: auto;
+  width: 285px;
+  padding-bottom: 50px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .info-adicional h3, .info-adicional p {
   text-align: left;
-  padding-left: 5%;
   width: auto;
-  margin: 0 0 5% 0;
+  margin: 0 0 15px 0;
 }
 
-.info-adicional .imagen-info-adicional {
-  padding-bottom: 10%;
+.info-adicional .contenedor-a {
+  display: block;
+  width: 141px;
 }
 
-.info-adicional a {
+.info-adicional .contenedor-a a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -224,14 +236,14 @@ body p {
       -ms-flex-align: start;
           align-items: flex-start;
   color: #65e2d9;
-  text-decoration: underline;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  padding-left: 5%;
+  border-bottom: #65e2d9 solid 1px;
+  padding-bottom: 5px;
 }
 
-.info-adicional a img {
-  padding-left: 3%;
+.info-adicional .contenedor-a a img {
+  padding-left: 10px;
 }
 
 .info-adicional a:hover {
@@ -265,18 +277,18 @@ body p {
       -ms-flex-flow: column;
           flex-flow: column;
   text-align: left;
-  padding: 0 10%;
   margin-bottom: 90%;
 }
 
 .contenedor-testimonios p {
+  padding: 15px 15px 0px 15px;
   line-height: 25px;
 }
 
 .contenedor-testimonios img {
   height: auto;
-  width: 8%;
-  margin-left: 10%;
+  width: 30px;
+  margin-left: 40px;
 }
 
 .contenedor-testimonios .testimonios {
@@ -284,8 +296,8 @@ body p {
   -ms-grid-column: 1;
   grid-area: testimonios;
   background-color: #202a3c;
-  margin: 0 20px 20px 20px;
-  padding: 10px;
+  margin: 0 30px 20px;
+  padding: 15px;
   border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -303,11 +315,10 @@ body p {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin: 10%;
 }
 
 .contenedor-testimonios .testimonios img {
-  border-radius: 50%;
+  border-radius: 50px;
   height: 40px;
   width: auto;
   margin: 20px 10px 0 0;
@@ -324,12 +335,8 @@ body p {
   text-align: left;
 }
 
-.contenedor-testimonios .testimonios .contenedor-perfil h3 {
-  margin: 0;
-}
-
 .contenedor-testimonios .testimonios .contenedor-perfil p {
-  margin: 0;
+  padding: 0;
 }
 
 .formulario {
@@ -339,12 +346,20 @@ body p {
   -ms-grid-column: 1;
   grid-area: formulario;
   background-color: #1c2431;
-  margin: 10%;
+  margin: 25px;
   border-radius: 10px;
 }
 
+.formulario h2 {
+  padding: 30px 10px 0;
+}
+
+.formulario p {
+  padding: 30px 25px;
+}
+
 .formulario input {
-  width: 80%;
+  width: 260px;
 }
 
 .formulario .input-mail {
@@ -352,11 +367,11 @@ body p {
   border-radius: 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-bottom: 5%;
+  margin-bottom: 15px;
 }
 
 .contacto {
-  padding-top: 70%;
+  padding-top: 250px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -ms-grid-row: 8;
@@ -376,16 +391,11 @@ body p {
 }
 
 .contacto img {
-  margin: 10% 10% 0 10%;
+  margin: 30px 40px;
 }
 
 .contacto ul {
   text-align: left;
-  padding-left: 5%;
-}
-
-.contacto ul p {
-  margin-left: 0;
 }
 
 .contacto ul li {
@@ -395,12 +405,11 @@ body p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 30px 0;
 }
 
 .contacto ul li img {
-  height: auto;
-  width: 5%;
-  margin: 5%;
+  margin: 0 25px;
 }
 
 .unordered-list {
@@ -408,18 +417,17 @@ body p {
   -ms-grid-column: 1;
   grid-area: unordered-list;
   background-color: #0b1523;
-  padding: 5%;
-  padding-top: 10%;
+  padding: 25px;
+  padding-top: 30px;
 }
 
 .unordered-list ul {
-  margin-bottom: 10%;
+  margin-bottom: 30px;
   text-align: left;
-  padding-left: 5%;
 }
 
 .unordered-list ul li {
-  padding-top: 4%;
+  padding-top: 12px;
 }
 
 .footer {
@@ -435,7 +443,7 @@ body p {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  padding: 10%;
+  padding: 30px;
 }
 
 .footer .contenedor-circular {
@@ -449,8 +457,8 @@ body p {
       -ms-flex-pack: center;
           justify-content: center;
   border: 1px solid white;
-  border-radius: 50%;
-  padding: 1%;
+  border-radius: 50px;
+  padding: 3px;
   margin: 0 10px;
   height: 20px;
   width: 20px;

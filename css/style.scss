@@ -23,17 +23,16 @@ $neutral: hsl(0, 0%, 100%);
 };
 
 body{
-    background-color: $main-backgroud;
+    background-color:red;
     text-align: center;
     font-size: 14px;
     color: $neutral;
     h1, h2, h3{
         font-family: "raleway","Arial";
         font-weight: 700;
-        margin: 4%;
     };
     h2{
-        line-height: 40px;
+        line-height: 30px;
     };
 
     p, ul{
@@ -41,7 +40,6 @@ body{
         font-weight: 400;
     };
     p{
-        margin: 6%;
         line-height: 20px;
     }
 
@@ -87,20 +85,20 @@ body{
     grid-area: barra;
     top: 0;
     display: flex;
-    padding: 10% 3%;
+    padding: 40px 20px;
     justify-content: space-between;
     align-items: center;
     background-color: $intro-email-sign-up-background;
 
     img{
-        padding-left: 5%;
+        padding-left: 15px;
         height: auto;
-        width: 20%;
+        width: 70px;
     }
 
     ul{
         display: flex;
-        padding-right: 5%;
+        padding-right: 15px;
         
         li{
             margin: 0 0 0 10px;
@@ -133,10 +131,10 @@ body{
     background-size:contain;
     background-image: url(/proyecto-1/imagenes-svg/bg-curvy-mobile.svg);
     background-color: $intro-email-sign-up-background;
-    padding-bottom: 25%;
+    padding-bottom: 95px;
     img{
         height: auto;
-        width: 80%;
+        width: 285px;
     }
     
 }
@@ -147,10 +145,14 @@ body{
         display: flex;
         flex-flow: column;
         align-items: center;
-        padding: 5% 10% 0 10%;
+        margin: 20px 25px 0;
         box-sizing: border-box;
         position: absolute;
-        top: 7%;
+        top: 320px;
+       
+        p{
+            padding: 20px 0;
+        }
     };
 };
 .ventajas{
@@ -158,48 +160,52 @@ body{
     display: flex;
     flex-flow: column wrap;
     align-content: center;
-    padding: 90% 10% 10% 10%;
+    margin: 330px 25px 50px;
 
     img{
         align-self: center;
         height: auto;
-        width: 15%;
+        width: 60px;
+        margin-bottom: 30px
     };
     p{
-        padding-bottom: 10%;
+        padding-top: 10px;
+        padding-bottom: 60px;
     };
 };
 .info-adicional{
     grid-area: info-adicional;
     display: flex;
     flex-flow: column;
-    padding: 10%;
-    margin-bottom: 20%;
+    margin: 0px 26px 200px;
+    
+    .imagen-info-adicional{
+        height: auto;
+        width: 285px;
+        padding-bottom: 50px;
+        align-self: center;
+    }
 
     h3, p{
         text-align: left;
-        padding-left: 5%;
         width: auto;
-        margin: 0 0 5% 0;
+        margin: 0 0 15px 0;
     };
-
-    .imagen-info-adicional{
-        padding-bottom: 10%;
-    }
-
-
-    a{
-        display: flex;
-        align-items: flex-start;
-        color: $call-to-action1;
-        text-decoration: underline;
-        align-self:flex-start;
-        padding-left: 5%;
-
-        img{
-            padding-left: 3%;
-        }
-        
+    .contenedor-a{
+        display: block;
+        width: 141px;
+        a{
+            display: flex;
+            align-items: flex-start;
+            color: $call-to-action1;
+            align-self:flex-start;
+            border-bottom: $call-to-action1 solid 1px;
+            padding-bottom: 5px;
+    
+            img{
+                padding-left: 10px;
+            };   
+        };   
     };
     a:hover{
         color: $neutral;
@@ -217,40 +223,40 @@ body{
         color: $neutral;
         img{
             filter: grayscale(100%);
-        }
-        
+        };
     };
 };
 .contenedor-testimonios{
     display: flex;
     flex-flow: column;
     text-align: left;
-    padding: 0 10%;
     margin-bottom: 90%;
    
+   
     p{
+        padding: 15px 15px 0px 15px;
         line-height: 25px;
     }
     img{
         height: auto;
-        width: 8%;
-        margin-left: 10%;
+        width: 30px;
+        margin-left: 40px;
     };
     .testimonios{
         grid-area: testimonios;
         background-color: $testimonials-background;
-        margin: 0 20px 20px 20px;
-        padding: 10px;
+        margin: 0 30px 20px;
+        padding: 15px;
         border-radius: 10px;
         display: flex;
         flex-flow: column;
         ul{
             display: flex;
             align-items: flex-end;
-            margin: 10%;
+            
         }
         img{
-            border-radius: 50%;
+            border-radius: 50px;
             height: 40px;
             width: auto;
             margin: 20px 10px 0 0;
@@ -260,14 +266,10 @@ body{
             display: flex;
             flex-flow: column;
             text-align: left;
-
-            h3{
-                margin: 0;
-            }
-            
             p{
-                margin: 0 ;
-            };
+                padding: 0;
+            }
+  
         };
     };
 };
@@ -276,21 +278,30 @@ body{
     top: -200px;
     grid-area: formulario;
     background-color: $intro-email-sign-up-background;
-    margin: 10%;
+    margin: 25px;
     border-radius: 10px;
+    h2{
+        padding: 30px 10px 0;
+    }
+
+    p{
+        padding: 30px 25px;
+
+    }
+
     input{
-        width: 80%;
+        width: 260px;
     };
 
     .input-mail{
         padding: 20px 20px 10px 20px;
         border-radius: 25px; 
         box-sizing: border-box;
-        margin-bottom: 5%;
+        margin-bottom: 15px;
     };
 };
 .contacto{
-    padding-top: 70%;
+    padding-top: 250px;
     box-sizing: border-box;
     grid-area: contacto;
     background-color: $footer-background;
@@ -298,38 +309,34 @@ body{
     align-items: flex-start;
     flex-flow: column wrap;
     img{
-        margin: 10% 10% 0 10%;
+        margin: 30px 40px;
     };
     ul{
         text-align: left;
-        padding-left: 5%;
-        p{
-            margin-left: 0;
-        }
+        
        
         li{
             display: flex;
             align-items: center;
-            img{
-                height: auto;
-                width: 5%;
-                margin: 5%
-            }; 
+            margin: 30px 0;
+          img{
+              margin: 0 25px;
+             }
         };
     };
 };
 .unordered-list{
     grid-area: unordered-list;
     background-color: $footer-background;
-    padding: 5%;
-    padding-top: 10%;
+    padding: 25px;
+    padding-top: 30px;
 
     ul{
-        margin-bottom: 10%;
+        margin-bottom: 30px;
         text-align: left;
-        padding-left: 5%;
+    
         li{
-            padding-top: 4%;
+            padding-top: 12px;
         };
     };
 };
@@ -339,7 +346,7 @@ body{
     display: flex;
     justify-content: center;
     align-content: center;
-    padding: 10%;
+    padding: 30px;
 
     
     
@@ -348,8 +355,8 @@ body{
         align-items: center;
         justify-content: center;
         border: 1px solid $neutral;
-        border-radius: 50%;
-        padding: 1%;
+        border-radius: 50px;
+        padding: 3px;
         margin: 0 10px;
         height: 20px;
         width: 20px;
