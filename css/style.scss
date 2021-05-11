@@ -23,6 +23,7 @@ $neutral: hsl(0, 0%, 100%);
 };
 
 body{
+    display: block;
     background-color:red;
     text-align: center;
     font-size: 14px;
@@ -383,33 +384,32 @@ body{
     };
    
    .boton{
-       width: 50%;
+       width: 350px;
    };
 
    
    .barra{
-    padding: 5% 3%;
+    padding: 40px 0 0 40px;
         img{ 
-            width: 15%;
+            width: 150px;
         }
         ul{
             display: flex;
-            padding-right: 5%;
+            padding-right: 45px;
             
             li{
                 margin: 0 0 0 50px;
             };
-        }
+        };
    };
 
     
-        
-    
    .main-image{
-        padding-bottom: 45%;
+       
+        padding:  150px 0 620px 0;
         img{
             height: auto;
-            width: 50%;
+            width: 650px;
         };
     };
 
@@ -418,10 +418,10 @@ body{
             display: flex;
             flex-flow: column;
             align-items: center;
-            padding: 5% 30% 0 30%;
+            padding: 150px 450px 0 450px;
             box-sizing: border-box;
             position: absolute;
-            top: 16%;
+            top: 650px;
         };
     };
     
@@ -431,17 +431,30 @@ body{
         grid-template-columns: 50% 50%;
         grid-template-rows: 50% 50%;
         align-content: center;
-        padding: 0 10%;
+        padding: 0 150px;
+        margin-top: 0;
+        img{
+            width: 70px;
+        }
+
     };
 
     .info-adicional{
-        margin-bottom: 0%;
+        
         flex-flow: row;
         align-items: center;
 
+        .contenedor-info{
+            padding-left: 50px;
+
+            h3{
+                font-size: 40px;
+            }
+        }
+
         .imagen-info-adicional{
             height: auto;
-            width: 65%;
+            width: 650px;
         };
     };
 
@@ -450,78 +463,82 @@ body{
         justify-content: space-evenly;
         flex-flow: row ;
         grid-column: 1/4;
-        margin-bottom: 40%;
+        margin-bottom: 500px;
 
         .comillas{
             position: absolute;
-            margin: -4% 0 0 -72%;
+            margin: -50px 0 0 -1280px;
             height: auto;
-            width: 6%;
+            width: 80px;
             z-index: 0;
             
         };
         
         .testimonios{
             z-index: 1;
-            margin: 0 0 0 3%;
-            padding: 1%;
+            margin: 0 30px;
+            padding: 30px 40px 30px 20px;
         };
     };
     
     .formulario{
-        margin: 0 15%;
+        margin: 0 350px;
         .contenedor-input-form{
             display: flex;
             justify-content: space-evenly;
-            margin-bottom: 5%;
+            margin-bottom: 40px;
             
             .input-mail{
-                margin: 0 2% 0 2%;
+                width: 400px
             };
             input{
-                width: 40%;
+                width: 200px;
                 height: auto;
-                margin: 0 2% 0 0;
+                margin: 0;
             };
     
         };
     };
     .contacto{
-        padding-top: 10%;
-        padding-bottom: 20%;
+        padding-top: 100px;
+        padding-bottom:200px;
         
         img{
-            margin: 10% 10% 0 10%;
+            margin-left: 80px;
         };
         ul{
             display: grid;
             grid-template-columns: repeat(2,50%);
             grid-template-rows: 50% 25% 25%;
             text-align: left;
-            padding-left: 5%;
+            padding-left: 40px;
             .location{
                 grid-area: 2/1/4/2;
+                display: flex;
             };
             .phone{
                 grid-area: 2/2/3/3;
-                
+                display: flex;
+                align-items: flex-end;
             };
             .mail{
-                grid-area: 3/2/4/3; 
+                grid-area: 3/2/4/3;
+                display: flex;
+                align-items: flex-end; 
             };
             
         };
     };
     .unordered-list{
-        padding-top: 105%;
+        padding-top: 290px;
         display: flex;
         justify-content: center;
 
         ul{
             text-align: left;
-            padding-right: 10%;
+            padding-right: 40px;
             li{
-                padding-top: 20%;
+                padding-top: 20px;
             };
         };        
     };
@@ -530,8 +547,8 @@ body{
         justify-content: center;
         align-content: center;
         
-        padding-top: 110%;
-        padding-right: 5%;
+        padding-top: 310px;
+        padding-right: 35px;
     };
 };
 
