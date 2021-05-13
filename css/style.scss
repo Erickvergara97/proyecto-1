@@ -126,21 +126,30 @@ body{
     };
 };
 .main-image{
+    position: relative;
+    padding-bottom: 140px;
+    .curvy-mobile{
+        z-index: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        
+    }
     grid-area: main-image;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-image: url(/proyecto-1/imagenes-svg/bg-curvy-mobile.svg);
+    
     background-color: $intro-email-sign-up-background;
-    padding-bottom: 95px;
-    img{
+    .imagen-principal{
+        position: relative;
+        z-index: 1;
         height: auto;
-        width: 285px;
+        width: 80%;
     }
     
 }
 .main{
     grid-area: main;
+    position: relative;
     
     .contenedor-main{
         display: flex;
@@ -149,7 +158,7 @@ body{
         margin: 20px 25px 0;
         box-sizing: border-box;
         position: absolute;
-        top: 320px;
+        top: -100px;
        
         p{
             padding: 20px 0;
@@ -405,11 +414,13 @@ body{
 
     
    .main-image{
+       padding-top: 50px;
+       padding-bottom: 40%;
        
-        padding:  150px 0 620px 0;
-        img{
+        
+        .imagen-principal{
             height: auto;
-            width: 650px;
+            width: 60%;
         };
     };
 
@@ -418,10 +429,10 @@ body{
             display: flex;
             flex-flow: column;
             align-items: center;
-            padding: 150px 450px 0 450px;
             box-sizing: border-box;
             position: absolute;
-            top: 650px;
+            top: 0;
+            
         };
     };
     
@@ -434,7 +445,8 @@ body{
         padding: 0 150px;
         margin-top: 0;
         img{
-            width: 70px;
+            width: auto;
+            height: 80px
         }
 
     };
